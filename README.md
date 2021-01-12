@@ -1,4 +1,4 @@
-# CRYPTO APP - Statistics depth book calculator
+# CRYPTO APP SERVER - Statistics depth book calculator
 
 This app connect to the binance websocket endpoint : 
 ```
