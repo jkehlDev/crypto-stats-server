@@ -1,5 +1,5 @@
 const WebSocket = require('ws');
-const { Depth, DepthStats } = require('../models');
+const { Depth, DepthStats } = require('./models');
 
 
 /**

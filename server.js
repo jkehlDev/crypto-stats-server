@@ -1,6 +1,6 @@
 require('dotenv').config();
 const config = require('./app.json');
-const cryptoThread = require('./app/DB/cryptoThread');
+const cryptoThread = require('./app/cryptoThread');
 const threads = [];
 
 for (const symbol of config.symbols) {
