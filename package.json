@@ -1,0 +1,16 @@
+{
+    "name": "CryptoApp",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "pg": "^8.5.1",
+        "sequelize": "^6.3.5",
+        "ws": "^7.4.2"
+    }
+}
