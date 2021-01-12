@@ -1,19 +1,19 @@
 require('dotenv').config();
 const config = require('./app.json');
 const cryptoThread = require('./app/DB/cryptoThread');
-const threads = {};
+const threads = [];
 
-const symbol = (request.params.symbol).toLowerCase();
 for (const symbol of config.symbols) {
-    const thread = threads[symbol] = new cryptoThread(symbol);
+    const thread = new cryptoThread(symbol);
+    threads.push(thread);
     thread.start();
 };
 
 process.stdin.resume(); //so the program will not close instantly
 
-async function exitHandler(options, exitCode) {
+function exitHandler(options, exitCode) {
     for (const thread of threads) {
-        thread.isStart && await thread.stop();
+        thread.isStart && thread.stop();
     }
     if (options.cleanup) console.log('clean');
     if (exitCode || exitCode === 0) console.log(exitCode);
