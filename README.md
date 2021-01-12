@@ -5,7 +5,7 @@ This app connect to the binance websocket endpoint :
 wss://stream.binance.com:9443/ws/
 ``` 
 
-And with collected data, make and store statistic on market trend into postgresqul _<depthstats>_ relation entity.
+And with collected data, make and store statistic on market trend into postgresqul _depthstats_ relation entity.
 
 ## How to use it 
 1. Have operationnal postgresql user and database
